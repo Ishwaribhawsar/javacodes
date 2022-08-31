@@ -1,0 +1,40 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	Scanner s = new Scanner(System.in);
+     float result;
+     char ch='y';
+   while(ch=='y')
+  {
+     System.out.println("Enter 2 numbers:");
+     float num1 = s.nextFloat();
+     float num2 = s.nextFloat();
+     System.out.println("which operation do you want to perform :\n ");
+     System.out.println("1. '+'    2. '-'    3. '*'  4. '/' ");
+     int option = s.nextInt();
+     if(option==1)
+    {
+        result=num1+num2;
+        System.out.println(num1+"+"+num2+"="+result);
+   } 
+     else if(option==2)
+    {
+        result=num1-num2;
+       System.out.println(num1+"-"+num2+"="+result);
+     }
+  else if(option==3)
+    {
+        result=num1*num2;
+       System.out.println(num1+"*"+num2+"="+result);
+     }
+  else if(option==4)
+    {
+        result=num1/num2;
+       System.out.println(num1+"/"+num2+"="+result);
+     }
+    System.out.println("Do you want to continue:\n enter choice yes(y)  no(n):");
+    ch = s.next().charAt(0);
+	}
+   }
+}

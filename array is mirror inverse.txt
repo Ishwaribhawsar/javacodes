@@ -1,0 +1,29 @@
+import java.util.*;
+class MirrorInverseArray1  
+{  
+  static boolean isMirrorInverse(int arr[])  
+  {  
+    for (int i = 0; i < arr.length; i++)   
+    {  
+      if (arr[arr[i]] != i)  
+      return false;  
+     }  
+    return true;  
+  }  
+public static void main(String args[])  
+{ 
+  Scanner s=new Scanner(System.in);
+  System.out.print("Enter the number of elements you want to store: ");  
+  int n=s.nextInt();  
+  int[] arr = new int[10]; 
+  System.out.println("Enter string:");
+  for(int i=0; i<n; i++)  
+  {  
+    arr[i]=s.nextInt();  
+  }  
+  if (isMirrorInverse(arr))  
+  System.out.println("Yes");  
+  else  
+  System.out.println("No");  
+}  
+}
